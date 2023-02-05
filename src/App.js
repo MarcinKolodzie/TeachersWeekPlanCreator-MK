@@ -1,5 +1,7 @@
 import React from 'react'
+import FullPageLayout from './FullPageLayout/FullPageLayout'
 import Loader from './Loader'
+import WelcomeForm from './WelcomeForm'
 
 export class App extends React.Component {
   state = {
@@ -9,14 +11,27 @@ export class App extends React.Component {
   }
 
   render () {
-    const { isLoading } = this.state
+    const {
+      isLoading,
+      route
+    } = this.state
 
     return (
       <div>
-        <h1>MK APP</h1>
+        {
+          route === 'WELCOME' ?
+            <FullPageLayout>
+              <WelcomeForm/>
+            </FullPageLayout>
+            :
+            null
+        }
+
         {
           isLoading ?
-            <Loader />
+            <FullPageLayout>
+              <Loader />
+            </FullPageLayout>
             :
             null
         }
