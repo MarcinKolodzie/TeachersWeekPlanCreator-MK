@@ -1,5 +1,5 @@
 import React from 'react'
-import FullPageLayout from './FullPageLayout/FullPageLayout'
+import FullPageLayout from './FullPageLayout'
 import Loader from './Loader'
 import WelcomeForm from './WelcomeForm'
 
@@ -21,7 +21,9 @@ export class App extends React.Component {
         {
           route === 'WELCOME' ?
             <FullPageLayout>
-              <WelcomeForm/>
+              <WelcomeForm
+                onClickGoChoseSubjects={() => console.log('onClickGoChoseSubjects')}
+              />
             </FullPageLayout>
             :
             null
