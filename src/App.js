@@ -1,5 +1,6 @@
 import React from 'react'
 import ChoseSubjectsForm from './ChoseSubjectsForm/ChoseSubjectsForm'
+import CreateWeekPlan from './CreateWeekPlan'
 import FullPageLayout from './FullPageLayout'
 import Loader from './Loader'
 import WelcomeForm from './WelcomeForm'
@@ -7,7 +8,7 @@ import WelcomeForm from './WelcomeForm'
 export class App extends React.Component {
   state = {
     isLoading: false,
-    route: 'WELCOME', // 'CHOSE-SUBJECTS' or 'CREATE-WEEK-PLAN'
+    route: 'CREATE-WEEK-PLAN', // 'CHOSE-SUBJECTS' or 'CREATE-WEEK-PLAN'
     subject: ''
   }
 
@@ -36,6 +37,15 @@ export class App extends React.Component {
               <ChoseSubjectsForm
                 onClickGoBackToWelcome={() => this.setState(() => ({ route: 'WELCOME' }))}
               />
+            </FullPageLayout>
+            :
+            null
+        }
+
+        {
+          route === 'CREATE-WEEK-PLAN' ?
+            <FullPageLayout>
+              <CreateWeekPlan />
             </FullPageLayout>
             :
             null
