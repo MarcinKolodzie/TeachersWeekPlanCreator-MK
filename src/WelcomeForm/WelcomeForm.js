@@ -20,7 +20,7 @@ export const WelcomeForm = (props) => {
         className={classes.header}
         variant={'h1'}
       >
-        Welcome in Week Paln Creator
+        Welcome in Week Plan Creator
       </Typography>
       <br />
       <Typography

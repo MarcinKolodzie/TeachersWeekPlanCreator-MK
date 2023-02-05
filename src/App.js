@@ -1,4 +1,5 @@
 import React from 'react'
+import ChoseSubjectsForm from './ChoseSubjectsForm/ChoseSubjectsForm'
 import FullPageLayout from './FullPageLayout'
 import Loader from './Loader'
 import WelcomeForm from './WelcomeForm'
@@ -22,7 +23,18 @@ export class App extends React.Component {
           route === 'WELCOME' ?
             <FullPageLayout>
               <WelcomeForm
-                onClickGoChoseSubjects={() => console.log('onClickGoChoseSubjects')}
+                onClickGoChoseSubjects={() => this.setState(() => ({ route: 'CHOSE-SUBJECTS' }))}
+              />
+            </FullPageLayout>
+            :
+            null
+        }
+
+        {
+          route === 'CHOSE-SUBJECTS' ?
+            <FullPageLayout>
+              <ChoseSubjectsForm
+                onClickGoBackToWelcome={() => this.setState(() => ({ route: 'WELCOME' }))}
               />
             </FullPageLayout>
             :
