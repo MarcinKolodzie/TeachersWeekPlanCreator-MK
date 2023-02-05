@@ -4,3 +4,12 @@
   justify-content: center;
   align-items: center;
 }
+
+.textField {
+  margin-top: 10px;
+}
+
+.button {
+  margin-top: 15px;
+  min-height: 40px;
+}

@@ -22,7 +22,7 @@ export const ChoseSubjectsForm = (props) => {
     >
       <Typography
         className={classes.header}
-        variant={'h3'}
+        variant={'h1'}
       >
         Chose subjests (up to 3)
       </Typography>
