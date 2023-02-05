@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classes from './styles.module.css'
-import Typography from '../Typography/Typography'
+import Typography from '../Typography'
+import Button from '../Button'
 
 export const WelcomeForm = (props) => {
   const {
     className,
+    onClickGoChoseSubjects,
     ...otherProps
   } = props
 
@@ -25,14 +27,23 @@ export const WelcomeForm = (props) => {
         className={classes.header}
         variant={'h3'}
       >
-        Chose subjests (up to 3)
+        App helps you create fantastic personal week plan
       </Typography>
+      <Button
+        className={classes.button}
+        variant={'contained'}
+        color={'primary'}
+        onClick={onClickGoChoseSubjects}
+      >
+        GO chose subjects
+      </Button>
     </div>
   )
 }
 
 WelcomeForm.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
+  onClickGoChoseSubjects: PropTypes.func
 }
 
 export default WelcomeForm
