@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classes from './styles.module.css'
-import TextField from '../TextField'
 import Typography from '../Typography'
+import SubjectForm from '../SubjectForm/SubjectForm'
 
 export const CreateDayPlan = (props) => {
   const {
@@ -22,10 +22,8 @@ export const CreateDayPlan = (props) => {
       >
         {children}
       </Typography>
-      <TextField
-        placeholder={'subject'}
-      >
-      </TextField>
+      <SubjectForm>
+      </SubjectForm>
     </div>
   )
 }

@@ -15,7 +15,11 @@
 
 }
 
-.text {}
+.add {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+}
 
 .text:hover {
   background-color: #e3e9dc;

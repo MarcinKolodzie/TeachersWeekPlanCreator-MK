@@ -33,7 +33,7 @@ export const Button = (props) => {
 Button.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
-  variant: PropTypes.oneOf(['contained', 'text']),
+  variant: PropTypes.oneOf(['contained', 'add', 'del']),
   color: PropTypes.oneOf(['primary', 'secondary'])
 }
 

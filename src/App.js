@@ -8,7 +8,7 @@ import WelcomeForm from './WelcomeForm'
 export class App extends React.Component {
   state = {
     isLoading: false,
-    route: 'CREATE-WEEK-PLAN', // 'CHOSE-SUBJECTS' or 'CREATE-WEEK-PLAN'
+    route: 'CHOSE-SUBJECTS', // 'CHOSE-SUBJECTS' or 'CREATE-WEEK-PLAN'
     subject: ''
   }
 
@@ -35,6 +35,7 @@ export class App extends React.Component {
           route === 'CHOSE-SUBJECTS' ?
             <FullPageLayout>
               <ChoseSubjectsForm
+                onClickGoCreate={() => this.setState(() => ({ route: 'CREATE-WEEK-PLAN' }))}
                 onClickGoBackToWelcome={() => this.setState(() => ({ route: 'WELCOME' }))}
               />
             </FullPageLayout>

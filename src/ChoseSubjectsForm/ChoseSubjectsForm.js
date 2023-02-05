@@ -11,6 +11,7 @@ export const ChoseSubjectsForm = (props) => {
     subject1,
     subject2,
     subject3,
+    onClickGoCreate,
     onClickGoBackToWelcome,
     ...otherProps
   } = props
@@ -45,6 +46,7 @@ export const ChoseSubjectsForm = (props) => {
         className={classes.button}
         variant={'contained'}
         color={'primary'}
+        onClick={onClickGoCreate}
       >
         Create WEEK PLAN
       </Button>
@@ -65,6 +67,7 @@ ChoseSubjectsForm.propTypes = {
   subject1: PropTypes.string,
   subject2: PropTypes.string,
   subject3: PropTypes.string,
+  onClickGoCreate: PropTypes.func,
   onClickGoBackToWelcome: PropTypes.func
 }
 
