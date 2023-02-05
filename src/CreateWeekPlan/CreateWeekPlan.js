@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classes from './styles.module.css'
 import CreateDayPlan from '../CreateDayPlan'
+import CreateDayNumber from '../CreateDayNumber'
 
 export const CreateWeekPlan = (props) => {
   const {
@@ -14,9 +15,9 @@ export const CreateWeekPlan = (props) => {
       className={`${classes.root}${className ? ` ${className}` : ''}`}
       {...otherProps}
     >
-      <CreateDayPlan>
+      <CreateDayNumber>
         No
-      </CreateDayPlan>
+      </CreateDayNumber>
       <CreateDayPlan>
         Monday
       </CreateDayPlan>
