@@ -34,38 +34,65 @@ export const CreateDayPlan = (props) => {
       </SubjectForm>
       <SubjectForm
         className={classes.form}
+        subject1 = {subject1}
+        subject2 = {subject2}
+        subject3 = {subject3}
       >
       </SubjectForm>
       <SubjectForm
         className={classes.form}
+        subject1 = {subject1}
+        subject2 = {subject2}
+        subject3 = {subject3}
       >
       </SubjectForm>
       <SubjectForm
         className={classes.form}
+        subject1 = {subject1}
+        subject2 = {subject2}
+        subject3 = {subject3}
       >
       </SubjectForm>
       <SubjectForm
         className={classes.form}
+        subject1 = {subject1}
+        subject2 = {subject2}
+        subject3 = {subject3}
       >
       </SubjectForm>
       <SubjectForm
         className={classes.form}
+        subject1 = {subject1}
+        subject2 = {subject2}
+        subject3 = {subject3}
       >
       </SubjectForm>
       <SubjectForm
         className={classes.form}
+        subject1 = {subject1}
+        subject2 = {subject2}
+        subject3 = {subject3}
       >
       </SubjectForm>
       <SubjectForm
         className={classes.form}
+        subject1 = {subject1}
+        subject2 = {subject2}
+        subject3 = {subject3}
       >
       </SubjectForm>
       <SubjectForm
         className={classes.form}
+        subject1 = {subject1}
+        subject2 = {subject2}
+        subject3 = {subject3}
       >
       </SubjectForm>
       <SubjectForm
         className={classes.form}
+        subject1 = {subject1}
+        subject2 = {subject2}
+        subject3 = {subject3}
       >
       </SubjectForm>
     </div>
