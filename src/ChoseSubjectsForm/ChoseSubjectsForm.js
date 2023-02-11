@@ -11,6 +11,9 @@ export const ChoseSubjectsForm = (props) => {
     subject1,
     subject2,
     subject3,
+    onChangeSubject1,
+    onChangeSubject2,
+    onChangeSubject3,
     onClickGoCreate,
     onClickGoBackToWelcome,
     ...otherProps
@@ -31,16 +34,19 @@ export const ChoseSubjectsForm = (props) => {
         className={classes.textField}
         placeholder={'Subject 1'}
         value={subject1}
+        onChange={onChangeSubject1}
       />
       <TextField
         className={classes.textField}
         placeholder={'Subject 2'}
         value={subject2}
+        onChange={onChangeSubject2}
       />
       <TextField
         className={classes.textField}
         placeholder={'Subject 3'}
         value={subject3}
+        onChange={onChangeSubject3}
       />
       <Button
         className={classes.button}
@@ -67,6 +73,9 @@ ChoseSubjectsForm.propTypes = {
   subject1: PropTypes.string,
   subject2: PropTypes.string,
   subject3: PropTypes.string,
+  onChangeSubject1: PropTypes.func,
+  onChangeSubject2: PropTypes.func,
+  onChangeSubject3: PropTypes.func,
   onClickGoCreate: PropTypes.func,
   onClickGoBackToWelcome: PropTypes.func
 }

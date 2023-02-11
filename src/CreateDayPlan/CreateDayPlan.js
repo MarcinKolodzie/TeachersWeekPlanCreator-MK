@@ -8,6 +8,9 @@ export const CreateDayPlan = (props) => {
   const {
     className,
     children,
+    subject1,
+    subject2,
+    subject3,
     ...otherProps
   } = props
 
@@ -22,7 +25,48 @@ export const CreateDayPlan = (props) => {
       >
         {children}
       </Typography>
-      <SubjectForm>
+      <SubjectForm
+        className={classes.form}
+        subject1 = {subject1}
+        subject2 = {subject2}
+        subject3 = {subject3}
+      >
+      </SubjectForm>
+      <SubjectForm
+        className={classes.form}
+      >
+      </SubjectForm>
+      <SubjectForm
+        className={classes.form}
+      >
+      </SubjectForm>
+      <SubjectForm
+        className={classes.form}
+      >
+      </SubjectForm>
+      <SubjectForm
+        className={classes.form}
+      >
+      </SubjectForm>
+      <SubjectForm
+        className={classes.form}
+      >
+      </SubjectForm>
+      <SubjectForm
+        className={classes.form}
+      >
+      </SubjectForm>
+      <SubjectForm
+        className={classes.form}
+      >
+      </SubjectForm>
+      <SubjectForm
+        className={classes.form}
+      >
+      </SubjectForm>
+      <SubjectForm
+        className={classes.form}
+      >
       </SubjectForm>
     </div>
   )
@@ -30,7 +74,10 @@ export const CreateDayPlan = (props) => {
 
 CreateDayPlan.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
+  subject1: PropTypes.string,
+  subject2: PropTypes.string,
+  subject3: PropTypes.string
 }
 
 export default CreateDayPlan

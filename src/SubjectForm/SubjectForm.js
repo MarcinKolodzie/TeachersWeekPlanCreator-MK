@@ -6,6 +6,8 @@ export const SubjectForm = (props) => {
   const {
     className,
     subject1,
+    subject2,
+    subject3,
     ...otherProps
   } = props
 
@@ -14,10 +16,13 @@ export const SubjectForm = (props) => {
       className={`${classes.root}${className ? ` ${className}` : ''}`}
       {...otherProps}
     >
-      <select name={'chose subject'}>
-        <option value={'first'}>{subject1}</option>
-        <option value={'second'}>SECOND</option>
-        <option value={'third'}>THIRD</option>
+      <select
+        name={'chose subject'}
+        // className={classes.select}
+      >
+        <option value={subject1}>{subject1}</option>
+        <option value={subject2}>{subject2}</option>
+        <option value={subject3}>{subject3}</option>
       </select>
     </div>
   )
@@ -25,7 +30,9 @@ export const SubjectForm = (props) => {
 
 SubjectForm.propTypes = {
   className: PropTypes.string,
-  subject1: PropTypes.string
+  subject1: PropTypes.string,
+  subject2: PropTypes.string,
+  subject3: PropTypes.string
 }
 
 export default SubjectForm

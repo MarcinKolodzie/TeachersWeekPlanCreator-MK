@@ -8,13 +8,18 @@ import WelcomeForm from './WelcomeForm'
 export class App extends React.Component {
   state = {
     isLoading: false,
-    route: 'CHOSE-SUBJECTS', // 'CHOSE-SUBJECTS' or 'CREATE-WEEK-PLAN'
-    subject: ''
+    route: 'WELCOME', // 'CHOSE-SUBJECTS' or 'CREATE-WEEK-PLAN'
+    subject1: '',
+    subject2: '',
+    subject3: ''
   }
 
   render () {
     const {
       isLoading,
+      subject1,
+      subject2,
+      subject3,
       route
     } = this.state
 
@@ -35,6 +40,12 @@ export class App extends React.Component {
           route === 'CHOSE-SUBJECTS' ?
             <FullPageLayout>
               <ChoseSubjectsForm
+                sub1={subject1}
+                sub2={subject2}
+                sub3={subject3}
+                onChangeSubject1={(e) => this.setState(() => ({ subject1: e.target.value }))}
+                onChangeSubject2={(e) => this.setState(() => ({ subject2: e.target.value }))}
+                onChangeSubject3={(e) => this.setState(() => ({ subject3: e.target.value }))}
                 onClickGoCreate={() => this.setState(() => ({ route: 'CREATE-WEEK-PLAN' }))}
                 onClickGoBackToWelcome={() => this.setState(() => ({ route: 'WELCOME' }))}
               />
@@ -46,7 +57,14 @@ export class App extends React.Component {
         {
           route === 'CREATE-WEEK-PLAN' ?
             <FullPageLayout>
-              <CreateWeekPlan />
+              <CreateWeekPlan
+                subject1={subject1}
+                subject2={subject2}
+                subject3={subject3}
+                onChangeSubject1={(e) => this.setState(() => ({ subject1: e.target.value }))}
+                onChangeSubject2={(e) => this.setState(() => ({ subject2: e.target.value }))}
+                onChangeSubject3={(e) => this.setState(() => ({ subject3: e.target.value }))}
+              />
             </FullPageLayout>
             :
             null
