@@ -34,18 +34,21 @@ export const ChoseSubjectsForm = (props) => {
         className={classes.textField}
         placeholder={'Subject 1'}
         value={subject1}
+        maxLength={12}
         onChange={onChangeSubject1}
       />
       <TextField
         className={classes.textField}
         placeholder={'Subject 2'}
         value={subject2}
+        maxLength={12}
         onChange={onChangeSubject2}
       />
       <TextField
         className={classes.textField}
         placeholder={'Subject 3'}
         value={subject3}
+        maxLength={12}
         onChange={onChangeSubject3}
       />
       <Button
