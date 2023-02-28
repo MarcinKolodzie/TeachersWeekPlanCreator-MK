@@ -1,10 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import image from '../img/schoolboard.png'
-
 import classes from './styles.module.css'
+import Typography from '../Typography'
 
-export const FullPageLayout = (props) => {
+export const StyledTextHead = (props) => {
   const {
     className,
     children,
@@ -15,16 +14,20 @@ export const FullPageLayout = (props) => {
     <div
       className={`${classes.root}${className ? ` ${className}` : ''}`}
       {...otherProps}
-      style={{ backgroundImage: `url(${image})` }}
     >
+      <Typography
+        variant={'h1'}
+      >
+        My awsome week with:
+      </Typography>
       {children}
     </div>
   )
 }
 
-FullPageLayout.propTypes = {
+StyledTextHead.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node
 }
 
-export default FullPageLayout
+export default StyledTextHead
