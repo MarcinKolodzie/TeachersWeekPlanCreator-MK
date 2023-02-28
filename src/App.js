@@ -3,6 +3,8 @@ import ChoseSubjectsForm from './ChoseSubjectsForm/ChoseSubjectsForm'
 import CreateWeekPlan from './CreateWeekPlan'
 import FullPageLayout from './FullPageLayout'
 import Loader from './Loader'
+import StyledTextHead from './StyledTextHead'
+import StyledTextHeadItem from './StyledTextHeadItem'
 import WelcomeForm from './WelcomeForm'
 
 export class App extends React.Component {
@@ -57,13 +59,21 @@ export class App extends React.Component {
         {
           route === 'CREATE-WEEK-PLAN' ?
             <FullPageLayout>
+              <StyledTextHead>
+                <StyledTextHeadItem
+                  text={subject1}
+                />
+                <StyledTextHeadItem
+                  text={subject2}
+                />
+                <StyledTextHeadItem
+                  text={subject3}
+                />
+              </StyledTextHead>
               <CreateWeekPlan
                 subject1={subject1}
                 subject2={subject2}
                 subject3={subject3}
-                onChangeSubject1={(e) => this.setState(() => ({ subject1: e.target.value }))}
-                onChangeSubject2={(e) => this.setState(() => ({ subject2: e.target.value }))}
-                onChangeSubject3={(e) => this.setState(() => ({ subject3: e.target.value }))}
               />
             </FullPageLayout>
             :

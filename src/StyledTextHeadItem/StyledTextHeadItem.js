@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import classes from './styles.module.css'
 import Typography from '../Typography'
 
-export const StyledTextHead = (props) => {
+export const StyledTextHeadItem = (props) => {
   const {
     className,
-    children,
+    text,
     ...otherProps
   } = props
 
@@ -15,25 +15,18 @@ export const StyledTextHead = (props) => {
       className={`${classes.root}${className ? ` ${className}` : ''}`}
       {...otherProps}
     >
-      <div>
-        <Typography
-          variant={'h1-cra'}
-        >
-          My awsome week with:
-        </Typography>
-      </div>
-      <div
-        className={classes.subjectWrapper}
+      <Typography
+        variant={'h2-cra'}
       >
-        {children}
-      </div>
+        {text}
+      </Typography>
     </div>
   )
 }
 
-StyledTextHead.propTypes = {
+StyledTextHeadItem.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.node
+  text: PropTypes.string
 }
 
-export default StyledTextHead
+export default StyledTextHeadItem

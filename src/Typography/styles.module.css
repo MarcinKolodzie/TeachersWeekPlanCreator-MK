@@ -29,10 +29,20 @@ text-align: left;
 
 .h1-cra {
   font-family: Roboto;
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 0.15000000596046448px;
+  text-align: center;
+  color: rgba(43, 25, 25, 0.8);
+}
+
+.h2-cra {
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 600;
   line-height: 36px;
   letter-spacing: 0.15000000596046448px;
   text-align: left;
-  color: rgb(79, 39, 39);
+  color: rgb(79, 39, 39, 0.3);
 }
